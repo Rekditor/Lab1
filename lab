@@ -1,0 +1,459 @@
+using ConsoleApp1;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            DataTypeResearch research = new DataTypeResearch();
+
+            //// 1. Дробная часть
+            //Console.Write("Введите вещественное число для дробной части: ");
+            //if (double.TryParse(Console.ReadLine(), out double x))
+
+            //    Console.WriteLine("Дробная часть: " + research.Fraction(x));
+
+
+            //// 3. Букву в число
+            //Console.Write("Введите символ (0-9): ");
+            //char ch = Console.ReadKey().KeyChar;
+            //Console.WriteLine();
+            //try { Console.WriteLine("Число: " + research.CharToNum(ch)); }
+            //catch (ArgumentException ex) { Console.WriteLine(ex.Message); }
+
+            //// 5. Двузначное
+            //Console.Write("Введите целое число для проверки на двузначность: ");
+            //if (int.TryParse(Console.ReadLine(), out int num))
+
+            //    Console.WriteLine("Двузначное: " + research.Is2Digits(num));
+
+            //// 7. Диапазон
+            //int a, b, number;
+            //while (true)
+            //{
+            //    Console.Write("Введите первуб границу диапазона: ");
+            //    if (int.TryParse(Console.ReadLine(), out a))
+            //        break;
+            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
+            //}
+
+            //while (true)
+            //{
+            //    Console.Write("Введите вторую границу диапазона: ");
+            //    if (int.TryParse(Console.ReadLine(), out b))
+            //        break;
+            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
+
+            //}
+            //while (true)
+            //{
+            //    Console.Write("Введите число для проверки на принадлежность диапазону: ");
+            //    if (int.TryParse(Console.ReadLine(), out number))
+            //        break;
+            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
+            //}
+
+            //Console.WriteLine("Число в диапазоне: " + research.IsInRange(a, b, number));
+
+
+            //// 9. Равенство
+            //Console.WriteLine("Введите три целых числа для проверки на равенство: ");
+            //int a1, b1, c1;
+            //while (true)
+            //{
+            //    Console.Write("Введите первое число: ");
+            //    if (int.TryParse(Console.ReadLine(), out a1))
+            //        break;
+            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
+            //}
+
+            //while (true)
+            //{
+            //    Console.Write("Введите второе чило: ");
+            //    if (int.TryParse(Console.ReadLine(), out b1))
+            //        break;
+            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
+
+            //}
+            //while (true)
+            //{
+            //    Console.Write("Введите третье число: ");
+            //    if (int.TryParse(Console.ReadLine(), out c1))
+            //        break;
+            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
+            //}
+            //Console.WriteLine("Числа равны: " + research.IsEqual(a1, b1, c1));
+
+
+
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            //// 1. Модуль числа
+            //Console.Write("Введите число для нахождения модуля: ");
+            //if (int.TryParse(Console.ReadLine(), out int d))
+            //{
+            //    Console.WriteLine($"Модуль числа: {research.Abs(d)}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Некорректный ввод.");
+            //}
+
+            //// 2. Тридцать пять
+            //Console.Write("Введите число для проверки на 3 и 5: ");
+            //if (int.TryParse(Console.ReadLine(), out d))
+            //{
+            //    Console.WriteLine($"Делится на 3 или 5 (но не на оба): {research.Is35(d)}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Некорректный ввод.");
+            //}
+
+            //// 3. Тройной максимум
+            //Console.Write("Введите три числа для нахождения максимума: ");
+            //if (int.TryParse(Console.ReadLine(), out int y) &&
+            //    int.TryParse(Console.ReadLine(), out int z) &&
+            //    int.TryParse(Console.ReadLine(), out int k))
+            //{
+            //    Console.WriteLine($"Максимальное число: {research.Max3(k, y, z)}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Некорректный ввод.");
+            //}
+
+            //// 4. Двойная сумма
+            //Console.Write("Введите два числа для суммы: ");
+            //if (int.TryParse(Console.ReadLine(), out y) &&
+            //    int.TryParse(Console.ReadLine(), out z))
+            //{
+            //    Console.WriteLine($"Сумма или корректированная сумма: {research.Sum2(y, z)}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Некорректный ввод.");
+            //}
+            //// 5. День недели
+            //Console.Write("Введите номер дня недели (1-7): ");
+            //if (int.TryParse(Console.ReadLine(), out int dayNumber)) Console.WriteLine($"День недели: {research.Day(dayNumber)}");
+            //else Console.WriteLine("Некорректный ввод.");
+
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            //1.Числа подряд
+            //Console.Write("Введите x для списка чисел: ");
+            //if (int.TryParse(Console.ReadLine(), out int x1))
+            //{
+            //    Console.WriteLine("Числа подряд: " + research.ListNums(x1));
+            //}
+
+            //3.Четные числа
+            //Console.Write("Введите x для четных чисел: ");
+            //if (int.TryParse(Console.ReadLine(), out int x2))
+            //{
+            //    Console.WriteLine("Четные числа: " + research.Chet(x2));
+            //}
+
+            //5.Длина числа
+            //Console.Write("Введите x для длины числа: ");
+            //if (long.TryParse(Console.ReadLine(), out long x3))
+            //{
+            //    Console.WriteLine("Длина числа: " + research.NumLen(x3));
+            //}
+
+            //7.Квадрат
+            //Console.Write("Введите x для квадрата: ");
+            //if (int.TryParse(Console.ReadLine(), out int x4))
+            //{
+            //    research.Square(x4);
+            //}
+
+            //9.Правый треугольник
+            //Console.Write("Введите x для правого треугольника: ");
+            //if (int.TryParse(Console.ReadLine(), out int x5))
+            //{
+            //    research.RightTriangle(x5);
+            //}
+
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            //// 1. Поиск первого значения
+            //int[] arr1 = { 1, 2, 3, 4, 2, 2, 5 };
+            //Console.Write("Введите x который есть в массиве: ");
+            //if (int.TryParse(Console.ReadLine(), out int x1))
+            //{
+            //    Console.WriteLine("Первое вхождение числа {0}: индекс {1}", x1, research.findFirst(arr1, x1));
+            //}
+
+            //// 3. Поиск максимального по модулю значения
+            //int[] arr2 = { 1, -2, -7, 4, 2, 2, 5 };
+            //Console.WriteLine("Максимальное по модулю значение: {0}", research.maxAbs(arr2));
+
+            //// 5. Добавление массива в массив
+            //int[] arr3 = { 1, 2, 3, 4, 5 };
+            //int[] ins = { 7, 8, 9 };
+            //Console.Write("Введите позицию, где объеденить массивы: ");
+            //if (int.TryParse(Console.ReadLine(), out int pos))
+            //{
+            //    int[] resultAdd = research.add(arr3, ins, pos);
+            //    Console.WriteLine("Результат добавления массива: [{0}]", string.Join(", ", resultAdd));
+            //}
+
+            //// 7. Возвратный реверс
+            //int[] arr4 = { 1, 2, 3, 4, 5 };
+            //int[] resultReverse = research.reverseBack(arr4);
+            //Console.WriteLine("Реверсированный массив: [{0}]", string.Join(", ", resultReverse));
+
+            //// 9. Все вхождения
+            //int[] arr5 = { 1, 2, 3, 8, 2, 2, 9 };
+            //Console.Write("Введите x который есть в массиве: ");
+            //if (int.TryParse(Console.ReadLine(), out int x5))
+            //{
+            //    int[] resultFindAll = research.findAll(arr5, x5);
+            //    Console.WriteLine("Индексы всех вхождений числа {0}: [{1}]", x5, string.Join(", ", resultFindAll));
+            //}
+        }
+    }
+}        
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+using ConsoleApp1;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            DataTypeResearch research = new DataTypeResearch();
+
+            //// 1. Дробная часть
+            //Console.Write("Введите вещественное число для дробной части: ");
+            //if (double.TryParse(Console.ReadLine(), out double x))
+
+            //    Console.WriteLine("Дробная часть: " + research.Fraction(x));
+
+
+            //// 3. Букву в число
+            //Console.Write("Введите символ (0-9): ");
+            //char ch = Console.ReadKey().KeyChar;
+            //Console.WriteLine();
+            //try { Console.WriteLine("Число: " + research.CharToNum(ch)); }
+            //catch (ArgumentException ex) { Console.WriteLine(ex.Message); }
+
+            //// 5. Двузначное
+            //Console.Write("Введите целое число для проверки на двузначность: ");
+            //if (int.TryParse(Console.ReadLine(), out int num))
+
+            //    Console.WriteLine("Двузначное: " + research.Is2Digits(num));
+
+            //// 7. Диапазон
+            //int a, b, number;
+            //while (true)
+            //{
+            //    Console.Write("Введите первуб границу диапазона: ");
+            //    if (int.TryParse(Console.ReadLine(), out a))
+            //        break;
+            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
+            //}
+
+            //while (true)
+            //{
+            //    Console.Write("Введите вторую границу диапазона: ");
+            //    if (int.TryParse(Console.ReadLine(), out b))
+            //        break;
+            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
+
+            //}
+            //while (true)
+            //{
+            //    Console.Write("Введите число для проверки на принадлежность диапазону: ");
+            //    if (int.TryParse(Console.ReadLine(), out number))
+            //        break;
+            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
+            //}
+
+            //Console.WriteLine("Число в диапазоне: " + research.IsInRange(a, b, number));
+
+
+            //// 9. Равенство
+            //Console.WriteLine("Введите три целых числа для проверки на равенство: ");
+            //int a1, b1, c1;
+            //while (true)
+            //{
+            //    Console.Write("Введите первое число: ");
+            //    if (int.TryParse(Console.ReadLine(), out a1))
+            //        break;
+            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
+            //}
+
+            //while (true)
+            //{
+            //    Console.Write("Введите второе чило: ");
+            //    if (int.TryParse(Console.ReadLine(), out b1))
+            //        break;
+            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
+
+            //}
+            //while (true)
+            //{
+            //    Console.Write("Введите третье число: ");
+            //    if (int.TryParse(Console.ReadLine(), out c1))
+            //        break;
+            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
+            //}
+            //Console.WriteLine("Числа равны: " + research.IsEqual(a1, b1, c1));
+
+
+
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            //// 1. Модуль числа
+            //Console.Write("Введите число для нахождения модуля: ");
+            //if (int.TryParse(Console.ReadLine(), out int d))
+            //{
+            //    Console.WriteLine($"Модуль числа: {research.Abs(d)}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Некорректный ввод.");
+            //}
+
+            //// 2. Тридцать пять
+            //Console.Write("Введите число для проверки на 3 и 5: ");
+            //if (int.TryParse(Console.ReadLine(), out d))
+            //{
+            //    Console.WriteLine($"Делится на 3 или 5 (но не на оба): {research.Is35(d)}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Некорректный ввод.");
+            //}
+
+            //// 3. Тройной максимум
+            //Console.Write("Введите три числа для нахождения максимума: ");
+            //if (int.TryParse(Console.ReadLine(), out int y) &&
+            //    int.TryParse(Console.ReadLine(), out int z) &&
+            //    int.TryParse(Console.ReadLine(), out int k))
+            //{
+            //    Console.WriteLine($"Максимальное число: {research.Max3(k, y, z)}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Некорректный ввод.");
+            //}
+
+            //// 4. Двойная сумма
+            //Console.Write("Введите два числа для суммы: ");
+            //if (int.TryParse(Console.ReadLine(), out y) &&
+            //    int.TryParse(Console.ReadLine(), out z))
+            //{
+            //    Console.WriteLine($"Сумма или корректированная сумма: {research.Sum2(y, z)}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Некорректный ввод.");
+            //}
+            //// 5. День недели
+            //Console.Write("Введите номер дня недели (1-7): ");
+            //if (int.TryParse(Console.ReadLine(), out int dayNumber)) Console.WriteLine($"День недели: {research.Day(dayNumber)}");
+            //else Console.WriteLine("Некорректный ввод.");
+
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            //1.Числа подряд
+            //Console.Write("Введите x для списка чисел: ");
+            //if (int.TryParse(Console.ReadLine(), out int x1))
+            //{
+            //    Console.WriteLine("Числа подряд: " + research.ListNums(x1));
+            //}
+
+            //3.Четные числа
+            //Console.Write("Введите x для четных чисел: ");
+            //if (int.TryParse(Console.ReadLine(), out int x2))
+            //{
+            //    Console.WriteLine("Четные числа: " + research.Chet(x2));
+            //}
+
+            //5.Длина числа
+            //Console.Write("Введите x для длины числа: ");
+            //if (long.TryParse(Console.ReadLine(), out long x3))
+            //{
+            //    Console.WriteLine("Длина числа: " + research.NumLen(x3));
+            //}
+
+            //7.Квадрат
+            //Console.Write("Введите x для квадрата: ");
+            //if (int.TryParse(Console.ReadLine(), out int x4))
+            //{
+            //    research.Square(x4);
+            //}
+
+            //9.Правый треугольник
+            //Console.Write("Введите x для правого треугольника: ");
+            //if (int.TryParse(Console.ReadLine(), out int x5))
+            //{
+            //    research.RightTriangle(x5);
+            //}
+
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            //// 1. Поиск первого значения
+            //int[] arr1 = { 1, 2, 3, 4, 2, 2, 5 };
+            //Console.Write("Введите x который есть в массиве: ");
+            //if (int.TryParse(Console.ReadLine(), out int x1))
+            //{
+            //    Console.WriteLine("Первое вхождение числа {0}: индекс {1}", x1, research.findFirst(arr1, x1));
+            //}
+
+            //// 3. Поиск максимального по модулю значения
+            //int[] arr2 = { 1, -2, -7, 4, 2, 2, 5 };
+            //Console.WriteLine("Максимальное по модулю значение: {0}", research.maxAbs(arr2));
+
+            //// 5. Добавление массива в массив
+            //int[] arr3 = { 1, 2, 3, 4, 5 };
+            //int[] ins = { 7, 8, 9 };
+            //Console.Write("Введите позицию, где объеденить массивы: ");
+            //if (int.TryParse(Console.ReadLine(), out int pos))
+            //{
+            //    int[] resultAdd = research.add(arr3, ins, pos);
+            //    Console.WriteLine("Результат добавления массива: [{0}]", string.Join(", ", resultAdd));
+            //}
+
+            //// 7. Возвратный реверс
+            //int[] arr4 = { 1, 2, 3, 4, 5 };
+            //int[] resultReverse = research.reverseBack(arr4);
+            //Console.WriteLine("Реверсированный массив: [{0}]", string.Join(", ", resultReverse));
+
+            //// 9. Все вхождения
+            //int[] arr5 = { 1, 2, 3, 8, 2, 2, 9 };
+            //Console.Write("Введите x который есть в массиве: ");
+            //if (int.TryParse(Console.ReadLine(), out int x5))
+            //{
+            //    int[] resultFindAll = research.findAll(arr5, x5);
+            //    Console.WriteLine("Индексы всех вхождений числа {0}: [{1}]", x5, string.Join(", ", resultFindAll));
+            //}
+        }
+    }
+}        
