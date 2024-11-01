@@ -233,7 +233,6 @@ namespace ConsoleApp1
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-using ConsoleApp1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -242,218 +241,206 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Program
+    public class DataTypeResearch
     {
-        static void Main(string[] args)
+        // 1. Дробная часть
+        public double Fraction(double x)
+        { 
+        return x - Math.Floor(x);
+        }
+
+        // 3. Букву в число
+        public int CharToNum(char x)
         {
-            DataTypeResearch research = new DataTypeResearch();
+            if (x >= '0' && x <= '9')
+        
+            return x - '0';
+        
+        throw new ArgumentException("Знак должен быть в диапазоне от '0' до '9'.");
+        }
 
-            //// 1. Дробная часть
-            //Console.Write("Введите вещественное число для дробной части: ");
-            //if (double.TryParse(Console.ReadLine(), out double x))
+        // 5. Двузначное
+        public bool Is2Digits(int x)
+        {
+            return x >= 10 && x <= 99;
+        }
 
-            //    Console.WriteLine("Дробная часть: " + research.Fraction(x));
+        // 7. Диапазон
+        public bool IsInRange(int a, int b, int num)
+        {
+            return (num >= Math.Min(a, b) && num <= Math.Max(a, b));
 
+        }
+        // 9. Равенство
+        public bool IsEqual(int a, int b, int c)
+        {
+            return a == b && b == c;
+        }
 
-            //// 3. Букву в число
-            //Console.Write("Введите символ (0-9): ");
-            //char ch = Console.ReadKey().KeyChar;
-            //Console.WriteLine();
-            //try { Console.WriteLine("Число: " + research.CharToNum(ch)); }
-            //catch (ArgumentException ex) { Console.WriteLine(ex.Message); }
+        // 1. Модуль числа
+        public int Abs(int d)
+        {
+            return d < 0 ? -d : d;
+        }
 
-            //// 5. Двузначное
-            //Console.Write("Введите целое число для проверки на двузначность: ");
-            //if (int.TryParse(Console.ReadLine(), out int num))
+        // 3. Тридцать пять
+        public bool Is35(int d)
+        {
+            return (d % 3 == 0 || d % 5 == 0) && !(d % 3 == 0 && d % 5 == 0);
+        }
 
-            //    Console.WriteLine("Двузначное: " + research.Is2Digits(num));
+        // 5. Тройной максимум
+        public int Max3(int d, int y, int z)
+        {
+            int maxXY = d > y ? d : y;
+            return maxXY > z ? maxXY : z;
+        }
 
-            //// 7. Диапазон
-            //int a, b, number;
-            //while (true)
-            //{
-            //    Console.Write("Введите первуб границу диапазона: ");
-            //    if (int.TryParse(Console.ReadLine(), out a))
-            //        break;
-            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
-            //}
+        // 7. Двойная сумма
+        public int Sum2(int d, int y)
+        {
+            int sum = d + y;
+            return (sum >= 10 && sum <= 19) ? 20 : sum;
+        }
 
-            //while (true)
-            //{
-            //    Console.Write("Введите вторую границу диапазона: ");
-            //    if (int.TryParse(Console.ReadLine(), out b))
-            //        break;
-            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
+        // 9. День недели
+        public string Day(int d)
+        {
+            switch (d)
+            {
+                case 1: return "понедельник";
+                case 2: return "вторник";
+                case 3: return "среда";
+                case 4: return "четверг";
+                case 5: return "пятница";
+                case 6: return "суббота";
+                case 7: return "воскресенье";
+                default: return "это не день недели";
+            }
+        }
+        // 1. Числа подряд
+        public string ListNums(int x)
+        {
+            string m = "";
+            for (int i = 0; i <= x; i++)
+            {
+                m += i.ToString();
+                m += " ";
+            }
+            return m;
+        }
 
-            //}
-            //while (true)
-            //{
-            //    Console.Write("Введите число для проверки на принадлежность диапазону: ");
-            //    if (int.TryParse(Console.ReadLine(), out number))
-            //        break;
-            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
-            //}
+        // 3. Четные числа
+        public string Chet(int x)
+        {
+            string m = "";
+            for (int i = 0; i <=x; i+=2)
+            {
+                m += i.ToString();
+                m += " ";
+            }
+            return m;
+        }
 
-            //Console.WriteLine("Число в диапазоне: " + research.IsInRange(a, b, number));
+        // 5. Длина числа
+        public int NumLen(long x)
+        {
+            int lenght = 0;
+            while (x >0)
+            {
+                x = x / 10;
+                lenght++;
+            }
+            return lenght;
+        }
 
+        // 7. Квадрат
+        public void Square(int x)
+        {
+            for (int i = 0; i < x; i++)
+            {
+                Console.WriteLine(new string('*', x));
+            }
+        }
 
-            //// 9. Равенство
-            //Console.WriteLine("Введите три целых числа для проверки на равенство: ");
-            //int a1, b1, c1;
-            //while (true)
-            //{
-            //    Console.Write("Введите первое число: ");
-            //    if (int.TryParse(Console.ReadLine(), out a1))
-            //        break;
-            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
-            //}
+        // 9. Правый треугольник
+        public void RightTriangle(int x)
+        {
+            for (int i = 1; i <= x; i++)
+            {
+                Console.WriteLine(new string(' ', x - i) + new string('*', i));
+            }
+        }
 
-            //while (true)
-            //{
-            //    Console.Write("Введите второе чило: ");
-            //    if (int.TryParse(Console.ReadLine(), out b1))
-            //        break;
-            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
+        // 1. Поиск первого значения
+        public int findFirst(int[] arr, int x)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == x)
+                    return i;
+            }
+            return -1; // Если число не найдено
+        }
 
-            //}
-            //while (true)
-            //{
-            //    Console.Write("Введите третье число: ");
-            //    if (int.TryParse(Console.ReadLine(), out c1))
-            //        break;
-            //    Console.WriteLine("Ошибка ввода. Пожалуйста, введите целое число.");
-            //}
-            //Console.WriteLine("Числа равны: " + research.IsEqual(a1, b1, c1));
+        // 3. Поиск максимального по модулю значения
+        public int maxAbs(int[] arr)
+        {
+            int max = arr[0];
+            foreach (int value in arr)
+            {
+                if (Math.Abs(value) > Math.Abs(max))
+                    max = value;
+            }
+            return max;
+        }
 
+        // 5. Добавление массива в массив
+        public int[] add(int[] arr, int[] ins, int pos)
+        {
+            int[] result1 = new int[arr.Length + ins.Length];
+            if (pos < 0 || pos > arr.Length)
+                return result1;
 
+            int[] result = new int[arr.Length + ins.Length];
+            for (int  i = 0;  i < pos;  i++)
+            {
+                result[i] = arr[i];
+            }
+            for (int i = pos; i < pos + ins.Length; i++)
+            {
+                result[i] = ins[i - pos];
+            }
+            for (int i = pos + ins.Length; i < arr.Length + ins.Length; i++)
+            {
+                result[i] = arr[i - ins.Length];
+            }
+            return result;
+        }
 
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        // 7. Возвратный реверс
+        public int[] reverseBack(int[] arr)
+        {
+            int[] reversed = new int[arr.Length];
+            int count = 0;
+            for (int i = arr.Length -1; i >= 0 ; i--)
+            {
+                reversed[count] = arr[i];
+                count++;
+            }
+            return reversed;
+        }
 
-            //// 1. Модуль числа
-            //Console.Write("Введите число для нахождения модуля: ");
-            //if (int.TryParse(Console.ReadLine(), out int d))
-            //{
-            //    Console.WriteLine($"Модуль числа: {research.Abs(d)}");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Некорректный ввод.");
-            //}
-
-            //// 2. Тридцать пять
-            //Console.Write("Введите число для проверки на 3 и 5: ");
-            //if (int.TryParse(Console.ReadLine(), out d))
-            //{
-            //    Console.WriteLine($"Делится на 3 или 5 (но не на оба): {research.Is35(d)}");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Некорректный ввод.");
-            //}
-
-            //// 3. Тройной максимум
-            //Console.Write("Введите три числа для нахождения максимума: ");
-            //if (int.TryParse(Console.ReadLine(), out int y) &&
-            //    int.TryParse(Console.ReadLine(), out int z) &&
-            //    int.TryParse(Console.ReadLine(), out int k))
-            //{
-            //    Console.WriteLine($"Максимальное число: {research.Max3(k, y, z)}");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Некорректный ввод.");
-            //}
-
-            //// 4. Двойная сумма
-            //Console.Write("Введите два числа для суммы: ");
-            //if (int.TryParse(Console.ReadLine(), out y) &&
-            //    int.TryParse(Console.ReadLine(), out z))
-            //{
-            //    Console.WriteLine($"Сумма или корректированная сумма: {research.Sum2(y, z)}");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Некорректный ввод.");
-            //}
-            //// 5. День недели
-            //Console.Write("Введите номер дня недели (1-7): ");
-            //if (int.TryParse(Console.ReadLine(), out int dayNumber)) Console.WriteLine($"День недели: {research.Day(dayNumber)}");
-            //else Console.WriteLine("Некорректный ввод.");
-
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-            //1.Числа подряд
-            //Console.Write("Введите x для списка чисел: ");
-            //if (int.TryParse(Console.ReadLine(), out int x1))
-            //{
-            //    Console.WriteLine("Числа подряд: " + research.ListNums(x1));
-            //}
-
-            //3.Четные числа
-            //Console.Write("Введите x для четных чисел: ");
-            //if (int.TryParse(Console.ReadLine(), out int x2))
-            //{
-            //    Console.WriteLine("Четные числа: " + research.Chet(x2));
-            //}
-
-            //5.Длина числа
-            //Console.Write("Введите x для длины числа: ");
-            //if (long.TryParse(Console.ReadLine(), out long x3))
-            //{
-            //    Console.WriteLine("Длина числа: " + research.NumLen(x3));
-            //}
-
-            //7.Квадрат
-            //Console.Write("Введите x для квадрата: ");
-            //if (int.TryParse(Console.ReadLine(), out int x4))
-            //{
-            //    research.Square(x4);
-            //}
-
-            //9.Правый треугольник
-            //Console.Write("Введите x для правого треугольника: ");
-            //if (int.TryParse(Console.ReadLine(), out int x5))
-            //{
-            //    research.RightTriangle(x5);
-            //}
-
-            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-            //// 1. Поиск первого значения
-            //int[] arr1 = { 1, 2, 3, 4, 2, 2, 5 };
-            //Console.Write("Введите x который есть в массиве: ");
-            //if (int.TryParse(Console.ReadLine(), out int x1))
-            //{
-            //    Console.WriteLine("Первое вхождение числа {0}: индекс {1}", x1, research.findFirst(arr1, x1));
-            //}
-
-            //// 3. Поиск максимального по модулю значения
-            //int[] arr2 = { 1, -2, -7, 4, 2, 2, 5 };
-            //Console.WriteLine("Максимальное по модулю значение: {0}", research.maxAbs(arr2));
-
-            //// 5. Добавление массива в массив
-            //int[] arr3 = { 1, 2, 3, 4, 5 };
-            //int[] ins = { 7, 8, 9 };
-            //Console.Write("Введите позицию, где объеденить массивы: ");
-            //if (int.TryParse(Console.ReadLine(), out int pos))
-            //{
-            //    int[] resultAdd = research.add(arr3, ins, pos);
-            //    Console.WriteLine("Результат добавления массива: [{0}]", string.Join(", ", resultAdd));
-            //}
-
-            //// 7. Возвратный реверс
-            //int[] arr4 = { 1, 2, 3, 4, 5 };
-            //int[] resultReverse = research.reverseBack(arr4);
-            //Console.WriteLine("Реверсированный массив: [{0}]", string.Join(", ", resultReverse));
-
-            //// 9. Все вхождения
-            //int[] arr5 = { 1, 2, 3, 8, 2, 2, 9 };
-            //Console.Write("Введите x который есть в массиве: ");
-            //if (int.TryParse(Console.ReadLine(), out int x5))
-            //{
-            //    int[] resultFindAll = research.findAll(arr5, x5);
-            //    Console.WriteLine("Индексы всех вхождений числа {0}: [{1}]", x5, string.Join(", ", resultFindAll));
-            //}
+        // 9. Все вхождения
+        public int[] findAll(int[] arr, int x)
+        {
+            List<int> indices = new List<int>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == x)
+                    indices.Add(i);
+            }
+            return indices.ToArray();
         }
     }
-}        
+}
